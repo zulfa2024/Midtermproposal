@@ -10,7 +10,8 @@ export default function DeleteButton({ id }: any) {
       method: "DELETE",
     });
 
-    router.push("/");
+    router.refresh(); // refresh the task list
+    router.push("/"); // navigate back home
   }
 
   return (
