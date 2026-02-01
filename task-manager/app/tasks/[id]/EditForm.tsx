@@ -17,7 +17,8 @@ export default function EditForm({ task }: any) {
       body: JSON.stringify({ title, description }),
     });
 
-    router.push("/");
+    router.refresh(); // refresh the homepage data
+    router.push("/"); // navigate back home
   }
 
   return (

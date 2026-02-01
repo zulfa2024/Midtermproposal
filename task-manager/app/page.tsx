@@ -2,6 +2,8 @@ import { connectDB } from "@/lib/mongodb";
 import Task from "@/models/Task";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic"; // ⬅️ Add this line
+
 export default async function Home() {
   await connectDB();
   const tasks = JSON.parse(JSON.stringify(await Task.find().lean()));
