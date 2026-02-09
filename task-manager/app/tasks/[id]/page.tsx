@@ -1,6 +1,6 @@
 import { connectDB } from "@/lib/mongodb";
-import Task from "@/models/Task";
-import Link from "next/link";
+import Task from "@/models/Task"; // Task model: lets us read a single task from the database.
+import Link from "next/link"; // Link: used for client-side navigation between pages.
 import EditForm from "./EditForm";
 import DeleteButton from "./DeleteButton";
 
@@ -9,9 +9,9 @@ export default async function TaskPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  await connectDB();
+  await connectDB(); // Ensures we have a connection to MongoDB before trying to read data.
 
-  const { id } = await params;
+  const { id } = await params; // Extract the task ID from the dynamic route /tasks/[id].
 
   const task = JSON.parse(JSON.stringify(await Task.findById(id).lean()));
 

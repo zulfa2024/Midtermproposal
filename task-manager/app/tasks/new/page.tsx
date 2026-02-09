@@ -1,13 +1,14 @@
 "use client";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react"; // - useState to manage form inputs.
+import { useRouter } from "next/navigation"; // - useRouter for client-side navigation
 
 export default function NewTaskPage() {
   const router = useRouter();
+  // useRouter allows redirecting the user after creating a task.
   const [title, setTitle] = useState("");
+  // useState stores the title input as the user types.
   const [description, setDescription] = useState("");
-
+  // useState stores the description input.
   async function handleSubmit(e: any) {
     e.preventDefault();
 

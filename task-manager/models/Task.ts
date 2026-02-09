@@ -1,3 +1,5 @@
+// Task model: defines the fields for each task and uses timestamps.
+// The export line prevents duplicate model creation during Next.js reloads.
 import mongoose from "mongoose";
 
 const TaskSchema = new mongoose.Schema(

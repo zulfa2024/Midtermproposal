@@ -2,10 +2,13 @@ import { connectDB } from "@/lib/mongodb";
 import Task from "@/models/Task";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic"; // ⬅️ Add this line
+export const dynamic = "force-dynamic"; 
+// This forces the page to always fetch fresh data on every request.
+// Without this, Next.js might cache the task list and not show updates immediately.
 
 export default async function Home() {
   await connectDB();
+  // Ensure database connection before running queries.
   const tasks = JSON.parse(JSON.stringify(await Task.find().lean()));
 
   return (

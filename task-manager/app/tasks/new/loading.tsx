@@ -1,3 +1,5 @@
+// This loading component appears while the New Task page is still fetching data.
+// Next.js automatically shows this file to prevent a blank screen and improve UX (User Experience).
 export default function LoadingNewTask() {
   return (
     <div className="max-w-xl mx-auto p-8">

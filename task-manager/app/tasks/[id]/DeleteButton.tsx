@@ -1,4 +1,9 @@
 "use client";
+// This must be a Client Component because it uses:
+// - useRouter() (a client-side hook)
+// - onClick event handling
+// - fetch() triggered from the browser
+// - router.refresh() and router.push() for navigation after deleting
 
 import { useRouter } from "next/navigation";
 

@@ -8,12 +8,15 @@ export const metadata = {
   description: "Simple CRUD task manager for midterm",
 };
 
+// Metadata for the whole application. Next.js uses this for the browser tab
+// title and description.
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
+    // Root HTML structure for the entire app.
     <html lang="en">
       <body className={`${inter.className} bg-gray-100 min-h-screen`}>
         <div className="max-w-3xl mx-auto py-10">{children}</div>

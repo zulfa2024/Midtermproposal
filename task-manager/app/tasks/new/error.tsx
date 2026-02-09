@@ -1,5 +1,8 @@
 "use client";
-
+// This must be a Client Component because it uses:
+// - an onClick event for the retry button
+// - the reset() function, which only works on the client
+// Error components need to run in the browser to let the user retry the route.
 export default function NewTaskError({ error, reset }: any) {
   return (
     <div className="max-w-xl mx-auto p-8 space-y-4">

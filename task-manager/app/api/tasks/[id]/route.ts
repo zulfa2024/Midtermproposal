@@ -1,3 +1,8 @@
+// PUT and DELETE handlers for a single task identified by its ID.
+// - connectDB(): makes sure MongoDB is connected before any operation.
+// - context.params: gives us the task ID from the dynamic route (/api/tasks/[id]).
+// - req.json(): reads updated fields sent from the client.
+
 import { connectDB } from "@/lib/mongodb";
 import Task from "@/models/Task";
 import { NextResponse } from "next/server";
