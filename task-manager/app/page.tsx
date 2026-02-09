@@ -2,7 +2,7 @@ import { connectDB } from "@/lib/mongodb";
 import Task from "@/models/Task";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic"; 
+export const dynamic = "force-dynamic";
 // This forces the page to always fetch fresh data on every request.
 // Without this, Next.js might cache the task list and not show updates immediately.
 
