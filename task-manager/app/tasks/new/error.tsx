@@ -13,7 +13,7 @@ export default function NewTaskError({ error, reset }: any) {
 
       <button
         onClick={() => reset()}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-200"
       >
         Try Again
       </button>
